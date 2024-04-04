@@ -1,5 +1,6 @@
 
 import os
+from langchain_core.documents import Document
 # Get the current directory
 current_directory = os.path.dirname(__file__)
 
@@ -13,4 +14,6 @@ for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
         with open(file_path, "r", encoding="utf-8") as file:
             content = file.read()
-            docs.append(content)
+             # Create a document object and append it to the list
+            doc = Document(page_content=content)
+            docs.append(doc)
