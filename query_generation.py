@@ -48,6 +48,8 @@ parsed_results = query_analyzer.invoke({"question": "in the context of radio tec
 for result in parsed_results:
     if isinstance(result, SubQuery):
         print("SubQuery:", result.sub_query)
+    elif isinstance(result,str):
+        print("Answer:",result)
 #results = retrieval_chain.invoke("in the context of radio technology, what is camped on a cell ?")
 #if results:
  #   most_relevant_doc = results[0]  # Get the most relevant document
