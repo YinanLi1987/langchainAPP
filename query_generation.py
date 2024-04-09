@@ -37,7 +37,7 @@ retrieval_chain = query_analyzer | retrieval
 
 
 
-results = retrieval_chain.invoke("in the context of radio technology, what is camped on a cell ?")
+results = retrieval_chain.invoke(" what is camped on a cell ?")
 if results:
     most_relevant_doc = results[0]  # Get the most relevant document
     print("Most Relevant Document Content:")
