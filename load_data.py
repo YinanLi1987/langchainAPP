@@ -17,3 +17,4 @@ for filename in os.listdir(folder_path):
              # Create a document object and append it to the list
             doc = Document(page_content=content)
             docs.append(doc)
+          

@@ -8,6 +8,7 @@ from langchain_core.documents import Document
 from indexing_document import vectorstore
 
 
+
 system = """You are an expert at converting user questions into database queries. \
 You have access to a database of 3GPP specifications:38.307,38.306,38.305,38.304,38.300. \
 Given a question, return a list of database queries optimized to retrieve the most relevant results.
@@ -19,7 +20,7 @@ prompt = ChatPromptTemplate.from_messages(
         ("human", "{question}"),
     ]
 )
-llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0,openai_api_key=Config.OPENAI_API_KEY)
+llm = ChatOpenAI(model="gpt-3.5-turbo-1106", temperature=0.2,openai_api_key=Config.OPENAI_API_KEY)
 structured_llm = llm.with_structured_output(Search)
 
 def retrieval(search: Search) -> List[Document]:
