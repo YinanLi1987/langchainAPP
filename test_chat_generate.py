@@ -4,23 +4,20 @@ from langchain_core.prompts import ChatPromptTemplate
 from typing import List
 from langchain_core.documents import Document
 from indexing_document import vectorstore
-from query_schema import Search
 
 
+#Define the LLM model 
 chat = ChatOpenAI(model="gpt-3.5-turbo-1106", temperature=0.2,openai_api_key=Config.OPENAI_API_KEY)
-
-def retrieval(search: Search) -> List[Document]:
-    return vectorstore.similarity_search(search.query)
-
-
-sample_search = Search(query="what is camped on a cell ?")
-retrieved_documents = retrieval(sample_search)
+#Define retrieval method and store retrivaled data into a list 
+def retrieval(userinput) -> List[Document]:
+   return vectorstore.similarity_search("what is a snowboard ?")
 
 
-
-
+# Define the retrivaled data list
+retrieved_documents = retrieval("what is a snowboard ?")
 
 reference_list = ", ".join(doc.page_content for doc in retrieved_documents)
+
 
 prompt = ChatPromptTemplate.from_messages(
     [
@@ -35,7 +32,7 @@ prompt = ChatPromptTemplate.from_messages(
 
 chain = prompt|chat
 
-responses = chain.invoke(["what is camped on a cell ?"])
+responses = chain.invoke(["what is a snowboard ?"])
 for response in responses:
     print("Generated Response:")
     print(response[1])
