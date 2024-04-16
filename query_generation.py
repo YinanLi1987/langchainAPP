@@ -1,7 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI
-from query_schema import Search
 from settings import Config
 from typing import List
 from langchain_core.documents import Document
@@ -21,24 +20,17 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 llm = ChatOpenAI(model="gpt-3.5-turbo-1106", temperature=0.2,openai_api_key=Config.OPENAI_API_KEY)
-structured_llm = llm.with_structured_output(Search)
 
-def retrieval(search: Search) -> List[Document]:
-    #if search.publish_year is not None:
-        # This is syntax specific to Chroma,
-        # the vector database we are using.
-      #  _filter = {"publish_year": {"$eq": search.publish_year}}
-    #else:
-       # _filter = None
-    return vectorstore.similarity_search(search.query)
-query_analyzer = {"question": RunnablePassthrough()} | prompt | structured_llm
+userinput="what is a snowboard ?"
+def retrieval(userinput) -> List[Document]:
+   return vectorstore.similarity_search("what is a snowboard ?")
+#query_analyzer = {"question": RunnablePassthrough()} | prompt | structured_llm
 
-retrieval_chain = query_analyzer | retrieval
+retrieval_chain = {"question": RunnablePassthrough()} |  prompt | retrieval
+#retrieval_chain = query_analyzer | retrieval
 
 
-
-
-results = retrieval_chain.invoke(" what is camped on a cell ?")
+results = retrieval_chain.invoke({"question": userinput})
 if results:
     most_relevant_doc = results[0]  # Get the most relevant document
     print("Most Relevant Document Content:")
