@@ -1,0 +1,35 @@
+{
+    "Metadata": {
+      "header": {
+        "WG": "TSG-RAN WG2",
+        "Meeting": "#125bis",
+        "Meeting_location": "Changsha, China",
+        "Meeting_date": "15/04/2024-19/04/2024",
+        "TDoc_no.": "R2-2403088",
+        "TDoc_no._was":"null"
+      },
+      "spec_number": "38.300",
+      "CR_number": "0847",
+      "revise_number": "-",
+      "Current_version": "18.1.0",
+      "Proposed_change_affects_UICC": "Radio Access Network",
+      "Title": "Introduction of SDT BFR [RA-SDT_BeamFailure]",
+      "Source_to_WG": "Nokia, Sony, Nokia Shanghai Bell",
+      "Source_to_TSG": "R2",
+      "Work_item_code": "TEI18",
+      "Date": "2024-04",
+      "Category": "B(addition of feature)",
+      "Release": "Rel-18",
+      "WG_status":"Approved",
+      "TSG_status":"Approved"
+    },
+    "Page_content": {
+      "Reason_for_change": "free text explanation of why the change is necessary",
+      "Summary_of_change": "……….",
+      "Consequences_if_not_approved": "…….",
+      "....":"......"
+
+
+    }
+  }
+  

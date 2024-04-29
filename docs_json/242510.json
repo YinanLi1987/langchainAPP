@@ -1,0 +1,28 @@
+{
+    "page_content": "3GPP TSG-CT WG1 Meeting #148\tC1-242510\nChangsha, China, 15 -19 April 2024\n\n\n\n\n\n* * * First Change * * * *\n\nD.2.1.6\tAbnormal cases in the UE\nThe following abnormal cases can be identified:\na)\tReceipt of an instruction associated with a UPSI which has a PLMN ID part that is not equal to the PLMN ID of the UE's HPLMN and the instruction contains a UE policy part with a UE policy part type set to \"URSP\" for a UE not operating in SNPN access operation mode, or receipt of an instruction associated with a UPSI which has a PLMN ID part that is not equal to the PLMN ID part of the selected SNPN and the instruction contains a UE policy part with a UE policy part type set to \"URSP\" for a UE operating in SNPN access operation mode.\n\tThe UE shall set the UE policy delivery service cause to #111 \u201cProtocol error, unspecified\u201d for the instruction in the UE policy section management result IE of the MANAGE UE POLICY COMMAND REJECT message.\nb)\tReceipt of an instruction associated with a UPSI which has a PLMN ID part that is not equal to the PLMN ID of the UE's HPLMN or the UE's RPLMN and the instruction contains a UE policy part with a UE policy part type set to \"ANDSP\" for a UE not operating in SNPN access operation mode or receipt of an instruction associated with a UPSI which has a PLMN ID part that is not equal to the PLMN ID part of the subscribed SNPN or the UE's RSNPN and the instruction contains a UE policy part with a UE policy part type set to \"ANDSP\" for a UE operating in SNPN access operation mode.\n\tThe UE shall set the UE policy delivery service cause to #111 \u201cProtocol error, unspecified\u201d for the instruction in the UE policy section management result IE of the MANAGE UE POLICY COMMAND REJECT message.\nc)\tTransmission failure of the MANAGE UE POLICY COMPLETE message indication from lower layers.\n\tThe UE shall not diagnose an error and consider the network-requested UE policy management procedure is complete.\nNOTE\u00a01:\tConsidering the network-requested UE policy management procedure is complete as the result of this abnormal case, does not cause the UE to revert the execution of the successfully executed instructions included in the MANAGE UE POLICY COMMAND message.\nd)\tTransmission failure of the MANAGE UE POLICY COMMAND REJECT message indication from lower layers.\n\tThe UE shall not diagnose an error and consider the network-requested UE policy management procedure is complete.\nNOTE\u00a02:\tConsidering the network-requested UE policy management procedure is complete as the result of this abnormal case, does not cause the UE to revert the execution of the successfully executed instructions included in the MANAGE UE POLICY COMMAND message.\ne)\tReceipt of a MANAGE UE POLICY COMMAND message with a PTI set to the same value as the PTI of a previously received MANAGE UE POLICY COMMAND message.\n\tThe UE shall discard the message and retransmit the MANAGE UE POLICY COMMAND COMPLETE or MANAGE UE POLICY COMMAND REJECT message transmitted in response to the previously received MANAGE UE POLICY COMMAND message.\nNOTE\u00a03:\tThe way to achieve this is UE implementation dependent. For example, the UE can assume that on the fifth expiry of timer T3501, the PCF will abort the procedure and that the PTI value assigned to the procedure will be released.\nf)\tReceipt of an instruction associated with a UPSI which has a PLMN ID part that is equal to the PLMN ID part of the selected SNPN, the instruction contains a UE policy part with a UE policy part type set to \"URSP\", UE's RSNPN is a non-subscribed SNPN and:\n1)\tthe UE has a stored non-subscribed SNPN signalled URSP handling indication for the selected entry of \"list of subscriber data\" or the selected PLMN subscription indicating that the UE is not allowed to accept URSP signalled by non-subscribed SNPNs; or\n2)\tthe UE does not have a stored non-subscribed SNPN signalled URSP handling indication for the selected entry of \"list of subscriber data\" or the selected PLMN subscription, and the non-subscribed SNPN signalled URSP handling indication preconfigured in the selected entry of \"list of subscriber data\" or the selected PLMN subscription indicates that the UE is not allowed to accept URSP signalled by non-subscribed SNPNs;\n\tfor a UE operating in SNPN access operation mode.\n\tThe UE shall set the UE policy delivery service cause to #111 \u201cProtocol error, unspecified\u201d for the instruction in the UE policy section management result IE of the MANAGE UE POLICY COMMAND REJECT message.\n",
+    "metadata": {
+        
+            "WG": "TSG-CT WG1",
+            "Meeting": "#148",
+            "Meeting_location": "Changsha, Hunan Province, China",
+            "Meeting_date": "15-04-2024",
+            "TDoc_no.": "C1-242510",
+            "TDoc_no._was": ""
+        ,
+        "spec_number": "24.501",
+        "CR_number": "6231",
+        "revise_number": "",
+        "Current_version": "18.6.0",
+        "Incorporates_to_version": "",
+        "Proposed_change_affects_UICC": "ME, Core Network",
+        "Title": "PLMN ID for URSP rule  ",
+        "Source_to_WG": "Samsung",
+        "Source_to_TSG": "C1",
+        "Work_item_code": "eUEPO",
+        "Date": "08-04-2024",
+        "Category": "F (correction)",
+        "Release": "Rel-18",
+        "WG_status": "postponed",
+        "TSG_status": ""
+    }
+}

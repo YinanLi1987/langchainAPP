@@ -1,0 +1,28 @@
+{
+    "page_content": "3GPP TSG- Meeting #\t\n, ,  - \n\n\n\n\n",
+    "metadata": {
+       
+            "WG": "TSG-CT WG1",
+            "Meeting": "#148",
+            "Meeting_location": "Changsha, Hunan Province, China",
+            "Meeting_date": "15-04-2024",
+            "TDoc_no.": "C1-242516",
+            "TDoc_no._was": ""
+        ,
+        "spec_number": "24.501",
+        "CR_number": "6233",
+        "revise_number": "",
+        "Current_version": "18.6.0",
+        "Incorporates_to_version": "",
+        "Proposed_change_affects_UICC": "",
+        "Title": "PDU session handle to support URSP rule enforcement",
+        "Source_to_WG": "Samsung",
+        "Source_to_TSG": "",
+        "Work_item_code": "eUEPO",
+        "Date": "2024-04-08",
+        "Category": "F (correction)",
+        "Release": "Rel-18",
+        "WG_status": "withdrawn",
+        "TSG_status": ""
+    }
+}

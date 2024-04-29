@@ -1,0 +1,28 @@
+{
+    "page_content": "3GPP TSG-CT WG1 Meeting #147\tC1-241194\nAthens, Greece, 26 February-1 March 2024\n\n\n\n\n*** first and only change ***\n\n9.11.3.1\t5GMM capability\nThe purpose of the 5GMM capability information element is to provide the network with information concerning aspects of the UE related to the 5GCN or interworking with the EPS. The contents might affect the manner in which the network handles the operation of the UE.\nThe 5GMM capability information element is coded as shown in figure\u00a09.11.3.1.1 and table\u00a09.11.3.1.1.\nThe 5GMM capability is a type 4 information element with a minimum length of 3 octets and a maximum length of 15 octets. \nFigure\u00a09.11.3.1.1: 5GMM capability information element\n\nTable\u00a09.11.3.1.1: 5GMM capability information element\n\n*** no more changes ***",
+    "metadata": {
+      
+            "WG": "TSG-CT WG1",
+            "Meeting": "#147",
+            "Meeting_location": "Athens, Greece",
+            "Meeting_date": "26-02-2024",
+            "TDoc_no.": "C1-241194",
+            "TDoc_no._was": ""
+        ,
+        "spec_number": "24.501",
+        "CR_number": "6127",
+        "revise_number": "",
+        "Current_version": "18.5.0",
+        "Incorporates_to_version": "18.6.0",
+        "Proposed_change_affects_UICC": "ME,Core Network",
+        "Title": "UE capability indication for support of network verified UE location",
+        "Source_to_WG": "MQualcomm Incorporated",
+        "Source_to_TSG": "C1",
+        "Work_item_code": "5GSAT_Ph2",
+        "Date": "2024-02-18",
+        "Category": "B (additional of feature)",
+        "Release": "Rel-18",
+        "WG_status": "merged",
+        "TSG_status": ""
+    }
+}

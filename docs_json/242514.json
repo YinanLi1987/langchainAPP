@@ -1,0 +1,28 @@
+{
+    "page_content": "3GPP TSG-CT WG1 Meeting #148\tC1-242514\nChangsha, China, 15 -19 April 2024\n\n\n\n\n\n* * * First Change- Alt 1 * * * *\n\n\n9.11.3.2\t5GMM cause\nThe purpose of the 5GMM cause information element is to indicate the reason why a 5GMM request from the UE is rejected by the network.\nThe 5GMM cause information element is coded as shown in figure\u00a09.11.3.2.1 and table\u00a09.11.3.2.1.\nThe 5GMM cause is a type 3 information element with length of 2 octets.\nFigure\u00a09.11.3.2.1: 5GMM cause information element\nTable\u00a09.11.3.2.1: 5GMM cause information element\n\n* * * Next Change \u2013 Alt2 * * * *\n\n\n\n\n\n\n\n\n",
+    "metadata": {
+        
+            "WG": "TSG-CT WG1",
+            "Meeting": "#148",
+            "Meeting_location": "Changsha, Hunan Province, China",
+            "Meeting_date": "15-04-2024",
+            "TDoc_no.": "C1-242514",
+            "TDoc_no._was": ""
+        ,
+        "spec_number": "24.501",
+        "CR_number": "6232",
+        "revise_number": "",
+        "Current_version": "18.6.0",
+        "Incorporates_to_version": "",
+        "Proposed_change_affects_UICC": "ME, Core Network",
+        "Title": "To handle registration not accepted case ",
+        "Source_to_WG": "Samsung",
+        "Source_to_TSG": "C1",
+        "Work_item_code": "5GSAT_Ph2",
+        "Date": "2024-04-08",
+        "Category": "F (correction)",
+        "Release": "Rel-18",
+        "WG_status": "merged",
+        "TSG_status": ""
+    }
+}
